@@ -1,18 +1,20 @@
 const sliderBox = document.querySelector('.slider');
 const slideElement = document.querySelectorAll('.slide');
 const slideImage = document.querySelectorAll('.slide__image');
+const astronautImage = document.querySelectorAll('.astronaut');
 /* const btnRight = document.querySelector('.right');
 const btnLeft = document.querySelector('.left');
 
  */
 
 const animLetters = document.querySelectorAll('.animation-letter');
-
+console.log(slideElement.length)
 
 /* PARAMETERS */
 let SlideIndex = 0
-slideColor = ["#986042","#41539B","#FDE0BF","#DF8316"]
-
+slideColor = ["#FA6401","#32C5FF","#6236FF","#F7B501"]
+/* slideColor = ["#986042","#41539B","#FDE0BF","#DF8316"]
+ */
 document.body.style.backgroundColor = slideColor[0]
 
 function showSlide(Index){
@@ -21,6 +23,7 @@ function showSlide(Index){
 
 function toSlide(Index){
     SlideIndex = Index
+    document.body.style.backgroundColor = slideColor[Index]
     showSlide(SlideIndex)
 }
 
@@ -62,30 +65,18 @@ window.addEventListener("keydown", ()=>{
 /* NO-SCRIPT */
 
 
-function updateSlide(index){
-    SlideIndex = index
-    slideElement.forEach(function(element) {
-        element.classList.remove('active');
-    });  
-   
-    document.body.style.backgroundColor = slideColor[SlideIndex]
-    slideElement[SlideIndex].classList.add('active')
-
-}
-
 
 
 /* DOTS */
-/*
+
 const dotsElement = document.querySelectorAll('.dots__element');
 
-dotsElement.forEach((dot, index) =>{  Index is  the  number of the clicked dot
+dotsElement.forEach((dot, index) =>{  
     dot.addEventListener('click', ()=>{
-        moveSlideAnimation(SlideIndex, index)
-        updateSlide(index)
+        toSlide(index)
     })
 })
- */
+
 
 
 

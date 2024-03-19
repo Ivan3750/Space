@@ -39,6 +39,7 @@ body{
     width: 100%;
     height: 100vh;
     flex: 0 0 100%;
+    position: relative;
 /*     animation: removeSlide 0.5s linear;
  */}
 
@@ -82,39 +83,87 @@ img{
 }
 
 
-/* #mars{
+#mars{
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 125px;
+    right: 20px;
 }
 
+#earth{
+    position: absolute;
+    top: -70px;
+    right: 20px;
+}
 #mercury{
     position: absolute;
-    top: 20px;
-    left: 20px;
-}
-#saturn{
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 100px;
+    right: -40px;
 }
 #venus{
     position: absolute;
     top: 20px;
     left: 20px;
-} */
+}
 .slide__body {
+    position: relative;
 }
 
 
+
+
+.astronaut{
+    width: 350px;
+    height: auto;
+    transition: 0.1s;
+}
+
+
+
+.astronaut__mars{
+    position: absolute;
+    top: 30px;
+    left: 200px;
+}
+
+.astronaut__earth{
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    rotate: -25deg;
+}
+
+.astronaut__mercury{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+
+.astronaut__venus{
+    position: absolute;
+    top: 80px;
+    right: 160px;
+    rotate: -30deg;
+}
+
+
+
+
+
+
+
+
 .slide__title {
-    transform: translate(500px,200px);
-    font-size: 100px;
+/*     transform: translate(500px,200px);
+ */    font-size: 150px;
     color: white;
     font-family: Unbounded;
-/*     position: absolute;
- */    top: 30%;
-    left: 40%;
+    font-weight: 900;
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+}
+.mercury__title{
+    left: 15vw;
 }
 .slider__dots {
 }
@@ -138,12 +187,14 @@ img{
 
 .animation-letter {
     display: inline-block;
+
 }
 
 
 .animation-letter.show{
     animation: AnimLetter 1s linear;
-    transform: scaleX(1.5)
+    transform: scaleX(1.5);
+    padding: 0px 20px;
 }
 
 
@@ -161,3 +212,5 @@ img{
 .slide__title{
     letter-spacing: 10px;
 } 
+
+
