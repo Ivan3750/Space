@@ -10,7 +10,6 @@ body{
     margin: 0px auto;
     display: flex;
     max-width: 1200px;
-    border: 1px solid #c54f4f;
     justify-content: space-between;
     align-items: center;
     height: 50px;
@@ -22,46 +21,28 @@ body{
 .main {
 }
 .container__section {
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0px auto;
-    border: 1px solid #000;
+/*     max-width: 1200px;
+ */    margin: 0px auto;
+ padding: 0px 80px;
 }
 .slider {
     transition: 0.7s;
-    background-color: #986042;
-    overflow: hidden;
-    border: 1px solid #000;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
+    max-height: 100vh;
     width: 100%;
-    position: relative;
     transition: 0;
 }
 
-.slide.active{
-    display: block;
-/*     animation: loadSlide 0.5s linear;   
- */    /* transform: translateX(0px); */
-}
+
 .slide{
     background-color: transparent;
     width: 100%;
     height: 100vh;
-    flex-basis: 100%;
+    flex: 0 0 100%;
 /*     animation: removeSlide 0.5s linear;
  */}
 
-.slide {
-    transition: 1s;
-    display: none;
-/*     position: absolute;
- */    width: 100%;
-/*  animation: removeSlide 0.5s linear;
- */
-}
+
 
 /* @keyframes loadSlide {
     0%{
@@ -100,12 +81,40 @@ img{
     filter: drop-shadow(3px 17px 28px black);
 }
 
+
+/* #mars{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#mercury{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#saturn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#venus{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+} */
 .slide__body {
 }
+
+
 .slide__title {
-    font-size: 80px;
+    transform: translate(500px,200px);
+    font-size: 100px;
     color: white;
     font-family: Unbounded;
+/*     position: absolute;
+ */    top: 30%;
+    left: 40%;
 }
 .slider__dots {
 }
@@ -126,3 +135,29 @@ img{
 }
 .footer__title {
 }
+
+.animation-letter {
+    display: inline-block;
+}
+
+
+.animation-letter.show{
+    animation: AnimLetter 1s linear;
+    transform: scaleX(1.5)
+}
+
+
+
+@keyframes AnimLetter {
+    0%{
+        transform: scaleX(1);
+
+    }
+    100%{
+        transform: scaleX(1.5);
+
+    }
+}
+.slide__title{
+    letter-spacing: 10px;
+} 

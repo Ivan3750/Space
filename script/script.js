@@ -1,43 +1,47 @@
 const sliderBox = document.querySelector('.slider');
 const slideElement = document.querySelectorAll('.slide');
 const slideImage = document.querySelectorAll('.slide__image');
-const btnRight = document.querySelector('.right');
+/* const btnRight = document.querySelector('.right');
 const btnLeft = document.querySelector('.left');
+
+ */
+
+const animLetters = document.querySelectorAll('.animation-letter');
 
 
 /* PARAMETERS */
 let SlideIndex = 0
 slideColor = ["#986042","#41539B","#FDE0BF","#DF8316"]
 
+document.body.style.backgroundColor = slideColor[0]
 
-btnRight.addEventListener("click", goNextSlide)
+function showSlide(Index){
+    sliderBox.style.transform = `translateX(-${Index * 100}%)`;
+}
 
+function toSlide(Index){
+    SlideIndex = Index
+    showSlide(SlideIndex)
+}
+
+
+
+/* btnRight.addEventListener("click", goNextSlide)
+ */
 function goNextSlide(){
-    let oldSlide;
-    oldSlide = SlideIndex
     SlideIndex =  (SlideIndex + 1) % slideElement.length
-    slideElement.forEach(function(element) {
-        element.classList.remove('active');
-    });    
-    sliderBox.style.backgroundColor = slideColor[SlideIndex]
-    moveSlideAnimation(oldSlide, SlideIndex)
-    slideElement[SlideIndex].classList.add('active')
+    document.body.style.backgroundColor = slideColor[SlideIndex]
+    showSlide(SlideIndex)
+    animLetters[SlideIndex].classList.add("show")
 }
 
-btnLeft.addEventListener("click", goPrevSlide)
-
+/* btnLeft.addEventListener("click", goPrevSlide)
+*/
 function goPrevSlide(){
-    let oldSlide;
-    oldSlide = SlideIndex
     SlideIndex = (SlideIndex - 1 + slideElement.length) % slideElement.length
-    slideElement.forEach(function(element) {
-        element.classList.remove('active');
-    });    
-    sliderBox.style.backgroundColor = slideColor[SlideIndex]
-    moveSlideAnimation(oldSlide, SlideIndex)
-    slideElement[SlideIndex].classList.add('active')
+    document.body.style.backgroundColor = slideColor[SlideIndex]
+    showSlide(SlideIndex)
 }
-
 
 
 
@@ -64,7 +68,7 @@ function updateSlide(index){
         element.classList.remove('active');
     });  
    
-    sliderBox.style.backgroundColor = slideColor[SlideIndex]
+    document.body.style.backgroundColor = slideColor[SlideIndex]
     slideElement[SlideIndex].classList.add('active')
 
 }
@@ -72,55 +76,21 @@ function updateSlide(index){
 
 
 /* DOTS */
-
+/*
 const dotsElement = document.querySelectorAll('.dots__element');
 
-dotsElement.forEach((dot, index) =>{ /* Index is  the  number of the clicked dot*/
+dotsElement.forEach((dot, index) =>{  Index is  the  number of the clicked dot
     dot.addEventListener('click', ()=>{
         moveSlideAnimation(SlideIndex, index)
         updateSlide(index)
     })
 })
+ */
 
 
 
 
 
-
-
-function moveSlideAnimation(oldSlide, newSlide = SlideIndex){ /* PrevSlide */
-    
-    let IndexAnimation = ""
-    if(oldSlide < newSlide){ 
-        IndexAnimation = "-"
-    }else{
-        IndexAnimation = ""
-    }
-    slideElement[oldSlide].animate([
-        { transform: 'translateX(0px)', display: "block", },
-        { transform: `translateX(${IndexAnimation}5000px)`, display: "none",}
-      ], {
-        duration: 500,
-        iterations: 1
-      })
-
-
-
-    if(IndexAnimation === ""){
-        IndexAnimation = "-"
-    }else{
-        IndexAnimation = ""
-    }
-    console.log(newSlide)
-    slideElement[newSlide].animate([
-        { transform: `translateX(${IndexAnimation}5000px)` },
-        { transform: 'translateX(0px)' }
-      ], {
-        duration: 500,
-        iterations: 1
-      })
-
-}
 
 window.addEventListener("mousemove",(e)=>{
 
