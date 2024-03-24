@@ -6,6 +6,7 @@
     margin: 0;  
     border: 0;  
     text-decoration: none;  
+    font-family: Unbounded;
 }  
      
 :focus,:active{outline: none;}  
@@ -14,8 +15,7 @@ a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}  
      
 :root{  
-    --boss: rgb(160, 160, 160);  
-    --colors: rgb(210, 198, 198);  
+     --slideHeight: calc(100vh - 200px);
 }   
      
 input,button,textarea{font-family:inherit;}  
