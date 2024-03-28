@@ -1,0 +1,14 @@
+.mask {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+
+}

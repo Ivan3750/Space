@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/normalize.css">
-</head>
-<body>
-    <header class="header">
-        <img src="./images/space-removebg-preview.png" alt="logo" class="header__img">
-        <div class="header__menu">
-            <img src="./images/icons8-menu-100.png" alt="" class="header__menu-img">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Space</title>
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="./style/normalize.css">
+        <link rel="stylesheet" href="./style/load.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+        <div class="mask">
+            <div class="loader">
+            </div>
         </div>
+        <header class="header">
+            <img src="./images/space-removebg-preview.png" alt="logo" class="header__img">
+            <div class="header__menu">
+                <img src="./images/icons8-menu-100.png" alt="" class="header__menu-img">
+                <div class="modal__background"></div>
+                <div class="header__cicrle-close">
+                    <span class="material-symbols-outlined header__close-img">
+                        close
+                    </span>                </div>
+            </div>
     </header>
     <main class="main">
         <section class="container__section">
@@ -96,8 +107,43 @@
                 </div>
             </footer>
         </section>
+        <section class="section__modal">
+            <div class="modal__menu">
+                <div class="modal__card__block">
+                    <div class="modal__card"></div>
+                </div>
+                <div class="modal__info__block">
+                    <ul class="info__list">
+                        <li class="info__element">Планети</li>
+                        <li class="info__element">Про нас</li>
+                        <li class="info__element">Блог</li>
+                        <li class="info__element">Новини</li>
+                    </ul>
+                </div>
+                <div class="modal__planets__block">
+                    <div class="planet__box">
+                        <img src="./images/mars_card.png" alt="" class="planet__box-img">
+                        <p class="planet__box-title">Mars</p>
+                    </div>
+                    <div class="planet__box">
+                        <img src="./images/earth_card.png" alt="" class="planet__box-img">
+                        <p class="planet__box-title">Earth</p>
+                    </div>
+                    <div class="planet__box">
+                        <img src="./images/mercury_card.png" alt="" class="planet__box-img">
+                        <p class="planet__box-title">Mercury</p>
+                    </div>
+                    <div class="planet__box">
+                        <img src="./images/venus_card.png" alt="" class="planet__box-img">
+                        <p class="planet__box-title">Venus</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="./script/script.js"></script>
     <script src="./script/animation.js"></script>
+    <script src="./script/modal__menu.js"></script>
+    <script src="./script/load.js"></script>
 </body>
 </html>

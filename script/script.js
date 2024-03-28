@@ -8,7 +8,6 @@ const btnLeft = document.querySelector('.left');
  */
 
 const animLetters = document.querySelectorAll('.animation-letter');
-console.log(slideElement.length)
 
 /* PARAMETERS */
 let SlideIndex = 0
@@ -90,3 +89,5 @@ window.addEventListener("mousemove",(e)=>{
     y = e.offsetY;
     slideImage[SlideIndex].style.transform = `translate(${-x/80}px, ${-y/80}px)`;
 }) */
+
+
