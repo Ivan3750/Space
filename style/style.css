@@ -13,7 +13,7 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 10px 0px; 
+    padding: 10px 15px; 
     align-items: center;
 }
 .header__img {
@@ -57,11 +57,13 @@ body{
 }
 .main {
 }
+
+
 .container__section {
 /*     max-width: 1200px;
  */    margin: 0px auto;
- padding: 0px 80px;
-}
+/*  padding: 0px 80px;
+ */}
 .slider {
     transition: 0.7s;
     display: flex;
@@ -272,6 +274,7 @@ img{
 .footer {
 }
 .footer__title {
+    margin-left: 50px;
     display: flex;
     gap: 20px;
     color: white;
