@@ -1,0 +1,16 @@
+{
+  "name": "space",
+  "version": "1.0.0",
+  "description": "Website about planets with parallax",
+  "scripts": {
+    "dev": "parcel build index.html"
+  },
+  "author": "Ivan Kohan",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

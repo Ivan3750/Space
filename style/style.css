@@ -1,4 +1,7 @@
-ul li{list-style: none;}  
+@import url(./_load.css);
+@import url(./_media.css);
+@import url(./_normalize.css);
+
 
 body{
     height: 100vh;
@@ -63,7 +66,10 @@ body{
 /*     max-width: 1200px;
  */    margin: 0px auto;
 /*  padding: 0px 80px;
- */}
+ */
+ overflow-x: hidden;
+ overflow-y: visible;
+}
 .slider {
     transition: 0.7s;
     display: flex;

@@ -1,0 +1,144 @@
+@media (max-width: 1199px) { 
+    .astronaut{
+        display: none;
+    }
+    .dots__group{
+        transform: translate(0px, -40px);
+    }
+    .slide__image{
+        width: 250px;
+        height: 250px;
+    }
+    .modal-planet{
+        width: 200px;
+        height: 200px;
+    }
+    .info__element{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .info__element{
+        font-size: 20px;
+    } 
+    .planet__box-img{
+        display: none;
+    }
+    .planet__box{
+        height: 75px;
+    }
+    .modal__card{
+        height: 65%;
+    }
+    .slide__title{
+        font-size: 100px;
+    }
+    .dots__group{
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 787px) { 
+    .modal__card__block{
+        display: none;
+    }
+    .slide__title{
+        top: 25vh;
+        left: 20vw;
+    }
+    .slide__title{
+        font-size: 80px;
+        letter-spacing: 4px;
+    }
+    .dots__group{
+        font-size: 20px;
+    }
+    .container__section {
+         margin: 0px auto;
+/*          padding: 0px 80px;
+ */        }
+    .slide{
+        background-color: transparent;
+        width: 100%;
+        height: var(--slideHeight);
+        flex: 0 0 100%;
+        position: relative;
+    }
+    .shadow__box{
+        gap: 50px;
+    }
+}
+
+
+
+@media (max-width: 575px) { 
+.info__list{
+    gap: 30px;
+}
+.planet__box{
+    height: 30px;
+}
+.modal__menu{
+    flex-wrap: wrap;
+}
+.planet__box{
+    flex-direction: column;
+}
+
+}
+@media (max-width: 575px) { 
+    .dots__group{
+        font-size: 18px;
+    }
+    .footer__title{
+        font-size: 18px;
+    }
+    .slide__image{
+        width: 150px;
+        height: 150px;
+    }
+    .slide__title{
+        font-size: 80px;
+    }
+    .mercury__title{
+        font-size: 40px;
+    }
+    .shadow__box-mars {
+        position: absolute;
+        top: 50px;
+        right: 80px;
+        z-index: -1;
+    
+    }
+    .shadow__box-earth {
+        position: absolute;
+        top: 10px;
+        right: 80px;
+        z-index: -1;
+    
+    }
+    .shadow__box-mercury {
+        position: absolute;
+        top: 70px;
+        right: 150px;
+        z-index: -1;
+    
+    }
+    .shadow__box-venus {
+        position: absolute;
+        top: 60px;
+        left: 70px;
+        z-index: -1;
+    
+    }
+    
+}
+
+@media (max-width: 425px) { 
+    .slide__title{
+        font-size: 50px;
+    }
+}
+
